@@ -2,7 +2,7 @@
 <html lang="en"> 
 <head> 
     <meta charset="UTF-8" />
-    <title>Making your first Phaser 3 Game - Part 10</title>
+    <title> Trabajo 04 - Introducción a JavaScript </title>
     <script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
     <style type="text/css">
         body {
@@ -126,6 +126,7 @@ function update ()
 {
     if (gameOver)
     {
+        this.add.text(16, 16, 'Game Over', { fontSize: '40px', fill: '#000' });
         return;
     }
 
