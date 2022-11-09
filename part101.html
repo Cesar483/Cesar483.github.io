@@ -37,9 +37,9 @@ var stars;
 var bombs;
 var platforms;
 var cursors;
-var score = 0;
+var puntaje = 0;
 var gameOver = false;
-var scoreText;
+var puntajeText;
 
 var game = new Phaser.Game(config);
 
@@ -111,7 +111,7 @@ function create ()
 
     bombs = this.physics.add.group();
 
-    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+    puntajeText = this.add.text(16, 16, 'Puntaje: 0', { fontSize: '32px', fill: '#000' });
 
     this.physics.add.collider(player, platforms);
     this.physics.add.collider(stars, platforms);
@@ -158,8 +158,8 @@ function collectStar (player, star)
 {
     star.disableBody(true, true);
 
-    score += 10;
-    scoreText.setText('Score: ' + score);
+    puntaje += 10;
+    puntajeText.setText('\033[1mPuntaje: ' + puntaje);
 
     if (stars.countActive(true) === 0)
     {
