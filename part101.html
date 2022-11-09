@@ -54,7 +54,7 @@ function preload ()
 
 function create ()
 {
-    this.add.image(400, 300, 'sky');
+    this.add.image(600, 500, 'sky');
 
     platforms = this.physics.add.staticGroup();
 
@@ -160,7 +160,7 @@ function collectStar (player, star)
     star.disableBody(true, true);
 
     puntaje += 10;
-    puntajeText.setText('\033[1mPuntaje: ' + puntaje);
+    puntajeText.setText('\033Puntaje: ' + puntaje);
 
     if (stars.countActive(true) === 0)
     {
