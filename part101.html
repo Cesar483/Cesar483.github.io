@@ -54,11 +54,11 @@ function preload ()
 
 function create ()
 {
-    this.add.image(600, 500, 'sky');
+    this.add.image(0, 0, 'sky').SetOrigin(0, 0)
 
     platforms = this.physics.add.staticGroup();
 
-    platforms.create(400, 568, 'ground').setScale(2).refreshBody();
+    platforms.create(400, 700, 'ground').setScale(2).refreshBody();
 
     platforms.create(600, 400, 'ground');
     platforms.create(50, 250, 'ground');
